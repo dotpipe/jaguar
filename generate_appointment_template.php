@@ -84,9 +84,9 @@ $jsonStructure = [
                 "tagname" => "button",
                 "id" => "add-to-schedule",
                 "textContent" => "Add to Schedule",
-                "ajax" => "process_appointment.php",
                 "method" => "GET",
                 "form-class" => "appointment-block",
+                "ajax" => "process_appointment.php",
                 "class" => "add-button themed-button",
                 "style" => "width: 100%; padding: 10px; background-color: #4a90e2; color: white; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer;"
             ]
@@ -96,12 +96,11 @@ $jsonStructure = [
         "tagname" => "button",
         "id" => "add-template-button",
         "textContent" => "Add New Appointment Block",
-        "class" => "themed-button clear-node",
         "method" => "GET",
-        "form-class" => "appointment-block",
-        "style" => "padding: 10px 20px; background-color: #4a90e2; color: white; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;",
+        "onclick" => 'modalList("./name.json");',
+        "class" => "themed-button clear-node",
         "insert" => "carousel-container",
-        "onclick" => "modal('./process_appointment.php', 'carousel-container');"
+        "style" => "padding: 10px 20px; background-color: #4a90e2; color: white; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;"
     ]
 ];
 

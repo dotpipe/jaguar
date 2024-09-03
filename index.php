@@ -112,12 +112,12 @@ session_start();
     <script>
         // Load the appointment form
         modal("./generate_appointment_template.php", "appointment-form-container");
-        function ready() {
+        // function ready() {
             
-            modal("./name.json", "carousel-container");
-            // console.log(dataJson);
-            // modala(dataJson, document.getElementById("carousel-container"));
-        }
+        //     modal("./name.json", "carousel-container");
+        //     // console.log(dataJson);
+        //     // modala(dataJson, document.getElementById("carousel-container"));
+        // }
     </script>
 </body>
 

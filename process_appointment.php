@@ -6,46 +6,32 @@ $formData = $_SERVER['REQUEST_METHOD'] === 'POST' ? $_POST : $_GET;
 
 $carouselFiles = glob('carousel*.json');
 $carouselNumber = count($carouselFiles) + 1;
-// Process form data into text representation
 
-$idTag = 'card' . $carouselNumber. 'event';
+$idTag = 'card' . $carouselNumber;
 $textRepresentation = [
     'tagname' => 'div',
     'id' => $idTag,
-    'textContent' => $formData['event_label'] . " " . $formData['event_date'] . " " . $formData['event_start'] . " " . $formData['event_over'] . " " .$formData['event_end'],
-    'class' => 'time-active',
-    'delay' => "500"
-    // 'event_date' => $formData['event_date'],
-    // 'event_start' => $formData['event_start'],
-    // 'event_over' => $formData['event_over'],
-    // 'event_end' => $formData['event_end']
-];
-
-// Create JSON structure
-$jsonStructure = [
-    'appointment' => $textRepresentation
+    'style' => 'background-color: #222222; color: #ffffff; padding: 20px; border-radius: 10px; margin-bottom: 20px; width: 100px; height auto; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);',
+    'class' => 'card-type',
+    'textContent' => $formData['event_label'] . " " . $formData['event_date'] . " " . $formData['event_start'] . " " . $formData['event_over'] . " " .$formData['event_end']
 ];
 
 // Create the new carousel file name
 $fileName = "carousel{$carouselNumber}.json";
 
-$string = "";
-// Create the carousel JSON structure
-foreach ($carouselFiles as $key => $value) {
-    $string .= "$value:carousel-container;";
-}
-
-$outmodal = [
-    'modal' => $string
-];
-// Combine the appointment and carousel data
-// $finalJson = array_merge($textRepresentation, $carouselJson);
-
-// Save the JSON to the file
-file_put_contents("server.json", json_encode($formData, JSON_PRETTY_PRINT));
-
 // Save the JSON to the file
 file_put_contents($fileName, json_encode($textRepresentation, JSON_PRETTY_PRINT));
 
-echo json_encode($outmodal);
+$fileFull = '{ "modal": "';
+
+foreach ($carouselFiles as $value) {
+    $fileFull .= "$value:carousel-container;";
+}
+
+$fileFull .= '" }';
+
+$file = json_decode($fileFull);
+$file = json_encode($file);
+file_put_contents("./name.json", $fileFull);
+echo json_encode($file, JSON_PRETTY_PRINT);
 ?>
