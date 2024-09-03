@@ -1,0 +1,7 @@
+{
+  "appointmentForm": {
+    "tagname": "div",
+    "id": "appointment-form",
+    "modal": "date-picker-modal.json:datePicker"
+  }
+}

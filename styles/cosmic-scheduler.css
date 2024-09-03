@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.cosmic-scheduler {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.stardust-select, .nebula-input, .galaxy-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.stardust-select option {
+    background-color: #302b63;
+}
+
+.time-warp-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cosmic-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cosmic-button:hover {
+    transform: scale(1.2);
+}
+
+.galaxy-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.warp-speed-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.warp-speed-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}

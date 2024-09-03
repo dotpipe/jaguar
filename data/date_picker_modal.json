@@ -1,0 +1,25 @@
+{
+  "datePicker": {
+    "tagname": "div",
+    "id": "date-picker-modal",
+    "class": "cosmic-modal",
+    "children": [
+      {
+        "tagname": "div",
+        "class": "modal-header",
+        "textContent": "Select Your Cosmic Date"
+      },
+      {
+        "tagname": "div",
+        "id": "calendar-container",
+        "class": "calendar-grid"
+      },
+      {
+        "tagname": "button",
+        "id": "confirm-date",
+        "class": "cosmic-button",
+        "textContent": "Confirm Stardate"
+      }
+    ]
+  }
+}
