@@ -1,0 +1,7 @@
+{
+    "tagname": "div",
+    "id": "card2",
+    "style": "background-color: #222222; color: #ffffff; padding: 20px; border-radius: 10px; margin-bottom: 20px; width: 100px; height auto; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);",
+    "class": "card-type",
+    "textContent": "Consult    "
+}
